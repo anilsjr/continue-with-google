@@ -14,6 +14,12 @@ router.get('/login/email', (req, res) => {
   res.render('email-login.ejs');
 });
 
+router.post('/login/email', (req, res) => {
+  res.send('<h1>this feature of this page is undera working</h1>');
+});
+
+
+
 // Initiates the Google Login flow
 router.get('/auth/google', (req, res) => {
   const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=profile email`;
